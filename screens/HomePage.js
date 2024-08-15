@@ -2,7 +2,7 @@ import { Button, Image, StyleSheet, Text, TouchableHighlight, TouchableOpacity, 
 import React from "react";
 const logo = require('../assets/sales.jpg')
 
-const HomePage = () => {
+const HomePage = ({navigation}) => {
   return (
     <View style={styles.homeView}>
 
@@ -20,11 +20,11 @@ const HomePage = () => {
         </View>
 
         <View style={styles.signView}>
-           <TouchableOpacity style={styles.touchables}>
+           <TouchableOpacity style={styles.touchables} onPress={()=> navigation.navigate('Login')}>
                 <Text style={styles.signText}>LOGIN</Text>
            </TouchableOpacity>
 
-           <TouchableOpacity style={styles.touchables}>
+           <TouchableOpacity style={styles.touchables} onPress={()=> navigation.navigate('Register')}>
                 <Text style={styles.signText}>SIGN-UP</Text>
            </TouchableOpacity>
             

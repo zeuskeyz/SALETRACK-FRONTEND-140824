@@ -1,20 +1,18 @@
-import {StyleSheet, SafeAreaView, Platform} from "react-native";
-import React from "react";
-import HomePage from "./screens/HomePage";
+import { StyleSheet, Platform } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import AppStack from "./AppStack";
 
 export default App = () => {
   return (
-      <SafeAreaView style={styles.safeBox}>
-        <HomePage/>
-      </SafeAreaView>
+    <NavigationContainer>
+        <AppStack />
+    </NavigationContainer>
   );
 };
 
 const styles = StyleSheet.create({
   safeBox: {
     flex: 1,
-    marginTop: Platform.OS === 'android'? 50: 0,
+    marginTop: Platform.OS === "android" ? 50 : 0,
   },
-
-
 });
